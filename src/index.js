@@ -1,9 +1,8 @@
 //database is in other continent(time lagta hai so use async await)
 //database se baat karne me problem a sakti hai so use try-catch or promises
+const path = require('path')
 const express = require('express')
 const app = express()
-const path = require('path')
-
 
 require('dotenv').config()
 //database url
@@ -12,7 +11,7 @@ const URL = process.env.MONGODB_URI
 port = process.env.PORT
 //for connect with database
 const dbConnection = require('../src/db/connectdb.js')
-dbConnection(URL);
+dbConnection(URL)
 
 
 
@@ -37,7 +36,6 @@ const routerr = require('../src/router/router.js')
 app.use('',routerr);
 
 
-//for listening to the port 5000
-app.listen(port,()=>{
-    console.log(`listening to the port ${port}`);
-})
+    app.listen(port,()=>{
+        console.log(`listening to the port ${port}`);
+    })
