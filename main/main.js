@@ -15,10 +15,10 @@ dbConnection(URL);
 //for read fronend data
 app.use(express.urlencoded({extended:false}))
 //view path
-const viewPath = path.join(process.cwd(),'npmmod','ytproject','views')
+const viewPath = path.join(process.cwd(),'ytproject','views')
 app.set('views',viewPath)
 //make public to folder
-const staticPath = path.join(process.cwd(),'npmmod','ytproject','public')
+const staticPath = path.join(process.cwd(),'ytproject','public')
 app.use(express.static(staticPath))
 //for listening to the port 5000
 app.use('',routerr);
