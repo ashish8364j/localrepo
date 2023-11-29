@@ -1,14 +1,12 @@
 const mongoose = require('mongoose')
 const dbConnection = async(URL)=>{
     try{
-        const obj = {
-            dbName : 'grocery'
-        }
-        mongoose.connect(URL,obj)
+        console.log(dbName)
+        await mongoose.connect(URL,`${process.env.DB_NAME}`)
         console.log('connected...');
     }
     catch(err){
-        console.log(err);
+        console.error("error :" , err);
     }
 }
 module.exports = dbConnection

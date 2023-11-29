@@ -1,6 +1,5 @@
 const express = require('express');
 const schemas = require('../model/schema.js')
-const multer = require('multer')
 const path = require('path')
 console.log(schemas);
 class studentController {
