@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const studentController = require('../controller/logic.js')
+const studentController = require('../src/controller/logic.js')
 console.log(studentController);
 const path = require('path')
 const multer = require('multer')

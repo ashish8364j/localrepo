@@ -10,7 +10,7 @@ port = 5000;
 const ejs = require('ejs')
 app.set('view engine','ejs')
 //for connect with database
-const dbConnection = require('../db/connectdb.js')
+const dbConnection = require('../src/db/connectdb.js')
 dbConnection(URL);
 //for read fronend data
 app.use(express.urlencoded({extended:false}))
