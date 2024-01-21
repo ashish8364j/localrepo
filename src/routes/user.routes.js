@@ -1,0 +1,30 @@
+const express = require('express')
+const wpverifymail = require('../controllers/wpauth/wpverifymail.js')
+const wpverifymailpost = require('../controllers/wpauth/wpverifymailpost.js')
+const wpactivateuser = require('../controllers/wpauth/wpactivateuser.js')
+const wpchecktoken = require('../middlewares/wpchecktoken.js')
+const wprefreshtoken = require('../controllers/wpauth/wprefreshmethod.js')
+const wpgetdata = require('../controllers/wpauth/wpgetdata.js')
+const wpgetchatmsg = require('../controllers/wpauth/wpgetchatmsg.js')
+const wplogin = require('../controllers/wpauth/wplogin.js')
+const wploginrefresh = require('../controllers/wpauth/wploginrefresh.js')
+const wpstartchecktokens = require('../controllers/wpauth/wpstartchecktoken.js')
+const wpupdateuser = require('../controllers/wpauth/wpupdateuser.js')
+const wpgetuseremailname = require('../controllers/wpauth/wpgetuseremailname.js')
+const router = express.Router()
+
+
+router.post('/wpverifymail',wpverifymail)
+router.post('/wpverifymailpost',wpverifymailpost)
+router.post('/wpactivate',wpchecktoken,wpactivateuser)
+router.get('/wprefresh',wprefreshtoken)
+router.post('/wpgetdata',wpgetdata)
+router.post('/wpgetchatmsg',wpgetchatmsg)
+router.post('/wplogin',wplogin)
+router.post('/wploginrefresh',wploginrefresh)
+router.post('/wpstartchecktokens',wpstartchecktokens)
+router.post('/wpupdateuser',wpupdateuser)
+router.post('/wpgetuseremailname',wpgetuseremailname)
+
+
+module.exports = router
